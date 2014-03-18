@@ -9,12 +9,12 @@ package functionalInterface;
  */
 public class ImplementsFunctionalInterface {
 
-    @FunctionalInterface
+    @java.lang.FunctionalInterface
     interface IntOperator{
         int apply(int i0, int i1);
     }
 
-    @FunctionalInterface
+    @java.lang.FunctionalInterface
     interface IntFunction{
         int apply(int i);
     }

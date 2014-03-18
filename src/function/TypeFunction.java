@@ -1,6 +1,7 @@
 package function;
 
 import java.util.function.Function;
+import java.util.function.BiFunction;
 
 /**
  * Created with IntelliJ IDEA.
@@ -15,7 +16,9 @@ public class TypeFunction {
          * function<argument,return>
          */
         Function<String,String> sample = s -> "your argument is " + s ;
-
         System.out.println(sample.apply("test"));
+
+        BiFunction<Integer,Integer,Integer> sum = (Integer i1, Integer i2) -> { return i1+i2; } ;
+        System.out.println(sum.apply(1,2));
     }
 }
