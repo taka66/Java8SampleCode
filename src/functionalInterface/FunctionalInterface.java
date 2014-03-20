@@ -7,5 +7,8 @@ package functionalInterface;
  * Time: 10:13
  * To change this template use File | Settings | File Templates.
  */
+@java.lang.FunctionalInterface
 public interface FunctionalInterface {
+    public void test();
+    //public void test2();
 }

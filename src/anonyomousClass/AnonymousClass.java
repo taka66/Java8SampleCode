@@ -11,15 +11,9 @@ package anonyomousClass;
  */
 public class AnonymousClass {
     public static void main(String[] args) {
-        Java8 java8 = new Java8(); //instance
-        java8.callTitle();
-        // StudySession studySession = new StudySession(); //interface cannot be instanced.
-    }
-
-    static class Java8 implements StudySession{
-        @Override public void callTitle(){
-            System.out.println("Java8 study session");
-        }
+        StudySession studySession = () -> System.out.println("Java8 study session");
+        StudySession withLambda = () -> System.out.println("Java8 study session");
+        studySession.callTitle();
     }
 
     static interface StudySession{

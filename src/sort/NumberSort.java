@@ -1,6 +1,6 @@
 package sort;
 
-import java.util.Comparator;
+import java.util.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -10,14 +10,34 @@ import java.util.Comparator;
  * To change this template use File | Settings | File Templates.
  */
 public class NumberSort {
-    Comparator<Integer> c = new Comparator<Integer>() {
-        @Override
-        public int compare(Integer a, Integer b) {
-            return a - b;
-        }
-    };
+
 
     public static void main(String[] args) {
-        List<Integer>
+        /**
+        Comparator<Integer> c = new Comparator<Integer>() {
+            @Override
+            public int compare(Integer a, Integer b) {
+                return a - b;
+            }
+        };
+
+         Comparator<Integer> c = (Integer a, Integer b) -> {
+         return a - b;
+         };
+
+         Comparator<Integer> c = (Integer a, Integer b) -> a - b;
+
+         Comparator<Integer> c = (a, b) -> a - b;
+        */
+        Comparator<Integer> c = (a, b) -> a - b;
+        List<Integer> numList = new ArrayList<Integer>();
+        numList.add(9);
+        numList.add(6);
+        numList.add(7);
+        System.out.println(numList);
+        System.out.println("before");
+        Collections.sort(numList, c);
+        System.out.println(numList);
+        System.out.println("after");
     }
 }
